@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  nextjs:
+    ports:
+      - '3000:3000'
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+      - nextjs-dev-node_modules:/app/node_modules
+      - nextjs-dev-next:/app/.next
+    environment:
+      - VIRTUAL_HOST=example.com
+      - VIRTUAL_PORT=3000
+    restart: always
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - nextjs
+    restart: always
+
+volumes:
+  nextjs-dev-node_modules:
+  nextjs-dev-next:
