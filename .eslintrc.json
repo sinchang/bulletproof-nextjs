@@ -1,5 +1,6 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["sonarjs"],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended", "plugin:sonarjs/recommended"],
   "settings": {
     "next": {
       "rootDir": "/src"
