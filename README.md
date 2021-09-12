@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [References](#References)
-- [Using HTTPS in Development](#Using HTTPS in Development)
+- [Using HTTPS in Development](#Using-HTTPS-in-Development)
 
 ## Using HTTPS in Development
 
