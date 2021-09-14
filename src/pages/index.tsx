@@ -6,11 +6,13 @@ import { useEffect } from 'react'
 import nookies from 'nookies'
 import { useConfig } from '@/providers/config'
 import { Text } from '@chakra-ui/layout'
+import { useToast } from '@/hooks/useToast'
 
 const Home: NextPage = () => {
   console.log(SERVER_VAR)
   const router = useRouter()
   const config = useConfig()
+  const toast = useToast()
 
   useEffect(() => {
     console.log(CLIENT_VAR)
@@ -26,6 +28,18 @@ const Home: NextPage = () => {
         Go to RTL Page
       </Button>
       <Text>languageCode from ConfigProvider: {config.languageCode}</Text>
+      <Button
+        onClick={() =>
+          toast({
+            status: 'warning',
+            description:
+              'hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world',
+            isClosable: true,
+          })
+        }
+      >
+        Show Toast
+      </Button>
     </div>
   )
 }
