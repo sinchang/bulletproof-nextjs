@@ -1,19 +1,23 @@
 import { theme } from '@/theme'
-import { ChakraProvider, Theme } from '@chakra-ui/react'
+import { Direction, getRtlDirection } from '@/utils/rtl'
+import { ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
-import { Direction, RtlProvider } from './rtl'
+import { ConfigContextState, ConfigProvider } from './config'
+import { RtlProvider } from './rtl'
 
 type AppProviderProps = {
   children: React.ReactNode
-  isRtl: boolean
+  config: ConfigContextState
 }
 
-export const AppProvider = ({ children, isRtl }: AppProviderProps) => {
-  const direction: Direction = isRtl ? 'rtl' : 'ltr'
+export const AppProvider = ({ children, config }: AppProviderProps) => {
+  const direction: Direction = getRtlDirection(config.languageCode)
 
   return (
     <ChakraProvider theme={{ ...theme, direction }}>
-      <RtlProvider isRtl={isRtl}>{children}</RtlProvider>
+      <RtlProvider dir={direction}>
+        <ConfigProvider value={config}>{children}</ConfigProvider>
+      </RtlProvider>
     </ChakraProvider>
   )
 }

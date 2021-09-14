@@ -1,8 +1,7 @@
 import { CacheProvider } from '@emotion/react'
 import createCache, { Options, StylisPlugin } from '@emotion/cache'
 import rtl from 'stylis-plugin-rtl'
-
-export type Direction = 'rtl' | 'ltr'
+import { Direction } from '@/utils/rtl'
 
 const options: { [k in Direction]: Options } = {
   rtl: { key: 'css-rtl', stylisPlugins: [rtl as StylisPlugin] },
@@ -11,11 +10,10 @@ const options: { [k in Direction]: Options } = {
 
 type RtlProviderProps = {
   children: React.ReactNode
-  isRtl: boolean
+  dir: Direction
 }
 
-export function RtlProvider({ children, isRtl }: RtlProviderProps) {
-  const dir: Direction = isRtl ? 'rtl' : 'ltr'
+export function RtlProvider({ children, dir }: RtlProviderProps) {
   const cache = createCache(options[dir])
   return <CacheProvider value={cache}>{children}</CacheProvider>
 }
