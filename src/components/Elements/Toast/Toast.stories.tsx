@@ -5,13 +5,6 @@ import { useToast } from '@/hooks/useToast'
 
 export default {
   title: 'Elements/Toast',
-  decorators: [
-    (Story: Function) => (
-      <>
-        <Story />
-      </>
-    ),
-  ],
 } as Meta
 
 export function DefaultToast() {
