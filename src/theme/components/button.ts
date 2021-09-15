@@ -1,4 +1,3 @@
-import { SystemStyleObject } from '@chakra-ui/styled-system'
 import { ComponentStyleConfig } from '@chakra-ui/theme'
 
 export const ButtonStyles: ComponentStyleConfig = {
