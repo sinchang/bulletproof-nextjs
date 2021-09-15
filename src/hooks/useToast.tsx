@@ -1,4 +1,4 @@
-import { Toast } from '@/components/Toast'
+import { Toast } from '@/components/Elements'
 import { UseToastOptions, useToast as useChakraToast } from '@chakra-ui/react'
 
 export const useToast = () => {
@@ -6,8 +6,8 @@ export const useToast = () => {
 
   const toastImplementation = (options: UseToastOptions) =>
     chakraToast({
-      ...options,
       position: 'top-right',
+      ...options,
       render: ({ onClose }) => (
         <Toast
           status={options.status}
