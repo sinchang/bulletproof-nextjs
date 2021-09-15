@@ -35,8 +35,7 @@ const Home: NextPage = () => {
             toast({
               id,
               status: 'warning',
-              description:
-                'hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world',
+              description: 'hello world',
               isClosable: true,
             })
           }
