@@ -6,8 +6,8 @@ export const useToast = () => {
 
   const toastImplementation = (options: UseToastOptions) =>
     chakraToast({
-      ...options,
       position: 'top-right',
+      ...options,
       render: ({ onClose }) => (
         <Toast
           status={options.status}
