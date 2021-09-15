@@ -1,4 +1,4 @@
-import { Toast } from '@/components/Toast'
+import { Toast } from '@/components/Elements'
 import { UseToastOptions, useToast as useChakraToast } from '@chakra-ui/react'
 
 export const useToast = () => {
