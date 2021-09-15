@@ -2,10 +2,10 @@ import { Toast } from '@/components/Toast'
 import { UseToastOptions, useToast as useChakraToast } from '@chakra-ui/react'
 
 export const useToast = () => {
-  const toast = useChakraToast()
+  const chakraToast = useChakraToast()
 
-  return (options: UseToastOptions) =>
-    toast({
+  const toastImplementation = (options: UseToastOptions) =>
+    chakraToast({
       ...options,
       position: 'top-right',
       render: ({ onClose }) => (
@@ -17,4 +17,6 @@ export const useToast = () => {
         />
       ),
     })
+
+  return Object.assign(toastImplementation, chakraToast)
 }

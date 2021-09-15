@@ -10,6 +10,7 @@ import { useToast } from '@/hooks/useToast'
 
 const Home: NextPage = () => {
   console.log(SERVER_VAR)
+  const id = 'test-toast'
   const router = useRouter()
   const config = useConfig()
   const toast = useToast()
@@ -29,14 +30,17 @@ const Home: NextPage = () => {
       </Button>
       <Text>languageCode from ConfigProvider: {config.languageCode}</Text>
       <Button
-        onClick={() =>
-          toast({
-            status: 'warning',
-            description:
-              'hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world',
-            isClosable: true,
-          })
-        }
+        onClick={() => {
+          if (!toast.isActive(id)) {
+            toast({
+              id,
+              status: 'warning',
+              description:
+                'hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world',
+              isClosable: true,
+            })
+          }
+        }}
       >
         Show Toast
       </Button>
