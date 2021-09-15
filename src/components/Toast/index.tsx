@@ -10,8 +10,8 @@ type ToastStatus = AlertStatus | 'default'
 type ToastMap = {
   [k in ToastStatus]: {
     icon: ReactNode
-    bg: ThemeTypings["colors"]
-    color: ThemeTypings["colors"]
+    bg: ThemeTypings['colors']
+    color: ThemeTypings['colors']
   }
 }
 
