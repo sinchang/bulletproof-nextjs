@@ -3,14 +3,15 @@ import { CheckCircleIcon, InfoOutlineIcon, WarningIcon, WarningTwoIcon } from '@
 import { CloseButton } from '@chakra-ui/close-button'
 import { Alert, AlertDescription, AlertStatus } from '@chakra-ui/alert'
 import { Box } from '@chakra-ui/layout'
+import { ThemeTypings } from '@chakra-ui/styled-system'
 
 type ToastStatus = AlertStatus | 'default'
 
 type ToastMap = {
   [k in ToastStatus]: {
     icon: ReactNode
-    bg: string
-    color: string
+    bg: ThemeTypings["colors"]
+    color: ThemeTypings["colors"]
   }
 }
 
