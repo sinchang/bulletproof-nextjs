@@ -1,18 +1,25 @@
 {
-  "plugins": [
-    "sonarjs"
-  ],
+  "plugins": ["sonarjs", "jest", "testing-library"],
   "extends": [
     "next/core-web-vitals",
     "plugin:prettier/recommended",
-    "plugin:sonarjs/recommended"
+    "plugin:sonarjs/recommended",
+    "plugin:jest/recommended",
+    "plugin:testing-library/react"
   ],
   "settings": {
     "next": {
       "rootDir": "/src"
+    },
+    "jest": {
+      "version": 27
     }
   },
+  "env": {
+    "jest/globals": true
+  },
   "rules": {
+    "no-empty-function": ["error"],
     "import/order": [
       "error",
       {
