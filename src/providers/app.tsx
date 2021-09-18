@@ -1,9 +1,9 @@
-import { theme } from '@/theme'
-import { Direction, getRtlDirection } from '@/utils/rtl'
-import { ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
+import { ChakraProvider } from '@chakra-ui/react'
 import { ConfigContextState, ConfigProvider } from './config'
 import { RtlProvider } from './rtl'
+import { theme } from '@/theme'
+import { Direction, getRtlDirection } from '@/utils/rtl'
 
 type AppProviderProps = {
   children: React.ReactNode

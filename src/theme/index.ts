@@ -1,7 +1,7 @@
 import { extendTheme, Theme } from '@chakra-ui/react'
-import { styles } from './styles'
-import { foundations } from './foundations'
 import { components } from './components'
+import { foundations } from './foundations'
+import { styles } from './styles'
 
 export const theme: Partial<Theme> = extendTheme({
   styles,

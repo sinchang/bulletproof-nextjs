@@ -1,8 +1,8 @@
-import { AppProvider } from '@/providers/app'
-import { ConfigContextState } from '@/providers/config'
 import type { AppContext, AppInitialProps, AppProps } from 'next/app'
 import App from 'next/app'
 import nookies from 'nookies'
+import { AppProvider } from '@/providers/app'
+import { ConfigContextState } from '@/providers/config'
 
 type MyAppProps = { config: ConfigContextState }
 

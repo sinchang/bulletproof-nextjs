@@ -1,5 +1,5 @@
-import { CacheProvider } from '@emotion/react'
 import createCache, { Options, StylisPlugin } from '@emotion/cache'
+import { CacheProvider } from '@emotion/react'
 import rtl from 'stylis-plugin-rtl'
 import { Direction } from '@/utils/rtl'
 
