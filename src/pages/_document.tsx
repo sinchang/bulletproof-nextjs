@@ -17,6 +17,7 @@ interface Props extends DocumentInitialProps {
 
 export default class AppDocument extends Document<Props> {
   static async getInitialProps(ctx: DocumentContext): Promise<Props> {
+    // eslint-disable-next-line testing-library/render-result-naming-convention
     const page = await ctx.renderPage()
     const { css, ids } = await renderStatic(page.html)
     const initialProps = await Document.getInitialProps(ctx)

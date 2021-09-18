@@ -1,3 +1,5 @@
 .next
 storybook-static
 node_modules
+coverage
+SonarTestResult

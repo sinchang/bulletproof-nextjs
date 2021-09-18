@@ -1,4 +1,4 @@
-import { Context, createContext, useContext } from 'react'
+import React, { createContext, useContext } from 'react'
 
 export interface ConfigContextState {
   languageCode: string

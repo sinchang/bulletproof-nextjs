@@ -5,3 +5,5 @@ yarn-error.log
 .dockerignore
 .git
 .gitignore
+coverage
+SonarTestResult
