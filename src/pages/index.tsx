@@ -1,12 +1,12 @@
-import { CLIENT_VAR, SERVER_VAR } from '@/config'
+import { useEffect } from 'react'
 import { Button } from '@chakra-ui/button'
+import { Text } from '@chakra-ui/layout'
 import type { GetServerSidePropsContext, NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import nookies from 'nookies'
-import { useConfig } from '@/providers/config'
-import { Text } from '@chakra-ui/layout'
+import { CLIENT_VAR, SERVER_VAR } from '@/config'
 import { useToast } from '@/hooks/useToast'
+import { useConfig } from '@/providers/config'
 
 const Home: NextPage = () => {
   console.log(SERVER_VAR)

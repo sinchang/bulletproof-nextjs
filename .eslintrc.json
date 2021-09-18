@@ -1,9 +1,42 @@
 {
-  "plugins": ["sonarjs"],
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended", "plugin:sonarjs/recommended"],
+  "plugins": [
+    "sonarjs"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended"
+  ],
   "settings": {
     "next": {
       "rootDir": "/src"
     }
+  },
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "never"
+      }
+    ]
   }
 }

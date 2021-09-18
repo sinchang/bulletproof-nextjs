@@ -1,5 +1,5 @@
-import createEmotionServer, { EmotionCritical } from '@emotion/server/create-instance'
 import { cache } from '@emotion/css'
+import createEmotionServer, { EmotionCritical } from '@emotion/server/create-instance'
 
 // https://github.com/vercel/next.js/blob/master/examples/with-emotion-vanilla
 export const renderStatic = async (html: string): Promise<EmotionCritical> => {

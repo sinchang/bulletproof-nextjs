@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
-import { CheckCircleIcon, InfoOutlineIcon, WarningIcon, WarningTwoIcon } from '@chakra-ui/icons'
-import { CloseButton } from '@chakra-ui/close-button'
 import { Alert, AlertDescription, AlertStatus } from '@chakra-ui/alert'
+import { CloseButton } from '@chakra-ui/close-button'
+import { CheckCircleIcon, InfoOutlineIcon, WarningIcon, WarningTwoIcon } from '@chakra-ui/icons'
 import { Box } from '@chakra-ui/layout'
 import { ThemeTypings } from '@chakra-ui/styled-system'
 

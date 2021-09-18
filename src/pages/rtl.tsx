@@ -1,6 +1,6 @@
+import { useEffect } from 'react'
 import { Button } from '@chakra-ui/button'
 import type { NextPage } from 'next'
-import { useEffect } from 'react'
 import { setCookie } from 'nookies'
 
 const RTL: NextPage = () => {

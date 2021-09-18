@@ -1,5 +1,4 @@
-import { renderStatic } from '@/utils/emotion'
-import { getRtlDirection } from '@/utils/rtl'
+import React from 'react'
 import Document, {
   Html,
   Head,
@@ -8,8 +7,9 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document'
-import React from 'react'
 import nookies from 'nookies'
+import { renderStatic } from '@/utils/emotion'
+import { getRtlDirection } from '@/utils/rtl'
 
 interface Props extends DocumentInitialProps {
   languageCode: string
